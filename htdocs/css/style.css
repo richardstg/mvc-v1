@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+body {
+    overflow-y: scroll;
+    width: 800px;
+    margin: 8px auto;
+    padding-left: 1em;
+    border-left: 1px solid #ccc;
+    font-family: 'Open Sans' sans-serif;
+    /* background-color: rgba(0, 0, 0, 0.774); */
+    /* background-color: rgba(0, 0, 0, 0.774);
+    color: rgba(255, 255, 255, 0.938); */
+}
+
+main {
+    min-height: 20em;
+}
+
+footer {
+    border-top: 1px solid #ccc;
+    min-height: 4em;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    padding: 100px 0;
+}
+
+
+input[type=submit] {
+    margin: 10px 0;
+    padding: 5px 10px;
+    text-align: center;
+    color: rgba(250, 250, 250, 1);
+    background-color: black;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    outline: none;
+}
+
+input[type=select] {
+    opacity: 0.9;
+    background-color: transparent;
+    padding: 12px 20px;
+    margin: 20px 8px;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 2px solid rgba(55, 127, 215, 0.8);
+    color: rgba(0, 0, 0, 1);
+    outline: none;
+    text-align: center;
+    width: 180px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.1em;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/**
+* CSS sprite for a dice with six faces.
+*/
+/* .dice-sprite {
+    display: inline-block;
+    padding: 0;
+    margin: 0 4px 0 0;
+    width: 32px;
+    height: 32px;
+    background: url(dice-faces.jpg) no-repeat;
+}
+
+.dice-sprite.dice-1 { background-position: -160px 0; }
+.dice-sprite.dice-2 { background-position: -128px 0; }
+.dice-sprite.dice-3 { background-position: -96px 0; }
+.dice-sprite.dice-4 { background-position: -64px 0; }
+.dice-sprite.dice-5 { background-position: -32px 0; }
+.dice-sprite.dice-6 { background-position: 0 0; } */
+
+/**
+ * Style a dice using UTF-8 characters.
+ */
+.dice-utf8 .dice-1::after { content: "\2680"; }
+.dice-utf8 .dice-2::after { content: "\2681"; }
+.dice-utf8 .dice-3::after { content: "\2682"; }
+.dice-utf8 .dice-4::after { content: "\2683"; }
+.dice-utf8 .dice-5::after { content: "\2684"; }
+.dice-utf8 .dice-6::after { content: "\2685"; }
+
+.dice-utf8 {
+    font-size: 32px;
+    font-style: !important normal;
+}
+
+.game {
+    min-height: 500px;
+}
+
+.total-points {
+    display: flex;
+    justify-content: space-evenly;
+}

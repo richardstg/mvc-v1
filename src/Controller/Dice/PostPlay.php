@@ -23,14 +23,16 @@ use function Mos\Functions\{
  */
 class PostPlay
 {
-    public function __invoke()
+    public function __invoke(): void
     {
         $_SESSION["lastRollPlayer"] = $_SESSION["game"]->playerPlay();
 
         if ($_SESSION["game"]->playerWin || $_SESSION["game"]->computerWin) {
-            return redirectTo(url("/results"));
+            redirectTo(url("/results"));
+            return;
         } else {
-            return redirectTo(url("/play"));
+            redirectTo(url("/play"));
+            return;
         }
     }
 }

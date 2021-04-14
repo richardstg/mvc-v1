@@ -10,7 +10,7 @@
 ?>
 <form action="play" method="post">
     <?php if ($numberOfRolls > 0) : ?>
-        <h1>Välj vilka tärningar du behålla</h1>
+        <h1>Välj vilka tärningar du vill behålla</h1>
         <p>
             Antal gjorda kast: <?= $numberOfRolls ?>
         </p>

@@ -23,9 +23,10 @@ use function Mos\Functions\{
  */
 class PostComputerPlay
 {
-    public function __invoke()
+    public function __invoke(): void
     {
         $_SESSION["game"]->computerPlay();
-        return redirectTo(url("/results"));
+        redirectTo(url("/results"));
+        return;
     }
 }

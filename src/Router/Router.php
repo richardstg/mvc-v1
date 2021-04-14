@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Rist\Router;
 
 use Rist\Dice\DiceGame;
-use function Rist\Functions\{
+use function Mos\Functions\{
     destroySession,
     redirectTo,
     renderView,

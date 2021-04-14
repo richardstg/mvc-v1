@@ -1,6 +1,8 @@
 <?php
 namespace Rist\Yatzy;
 
+use Rist\Dice\DiceHand;;
+
 /**
  * Yatzy game.
  */
@@ -44,7 +46,7 @@ class YatzyGame
     /**
     * Set dices to keep.
     *
-    * @return array.
+    * @return void.
     */
     public function setDicesToKeepIndexes($dicesToKeepIndexes)
     {
@@ -85,7 +87,7 @@ class YatzyGame
     /**
     * Count points.
     *
-    * @return array.
+    * @return int.
     */
     public function countPoints($diceValue)
     {

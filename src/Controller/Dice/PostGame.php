@@ -23,13 +23,14 @@ use function Mos\Functions\{
  */
 class PostGame
 {
-    public function __invoke()
+    public function __invoke(): void
     {
         if (!isset($_SESSION["game"])) {
             $_SESSION["game"] = new DiceGame(intval($_POST["numberDices"]));
         } else {
             $_SESSION["game"]->newRound();
         }
-        return redirectTo(url("/play"));
+        redirectTo(url("/play"));
+        return;
     }
 }

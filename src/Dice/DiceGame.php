@@ -80,7 +80,7 @@ class DiceGame
     /**
      * Computer play.
      *
-     * @return void.
+     * @return array.
      */
     public function computerPlay()
     {

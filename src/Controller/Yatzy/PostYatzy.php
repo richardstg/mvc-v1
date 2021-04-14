@@ -23,13 +23,14 @@ use function Mos\Functions\{
  */
 class PostYatzy
 {
-    public function __invoke()
+    public function __invoke(): void
     {
         if (!isset($_SESSION["yatzy"])) {
             $_SESSION["yatzy"] = new YatzyGame();
         } else {
             $_SESSION["yatzy"] = new YatzyGame();
         }
-        return redirectTo(url("/yatzy/play"));
+        redirectTo(url("/yatzy/play"));
+        return;
     }
 }

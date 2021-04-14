@@ -23,10 +23,11 @@ use function Mos\Functions\{
  */
 class PostYatzyPlay
 {
-    public function __invoke()
+    public function __invoke(): void
     {
         if (isset($_POST["stop"]) || ($_SESSION["yatzy"]->numberOfRolls === 3)) {
-            return redirectTo(url("/yatzy/results"));
+            redirectTo(url("/yatzy/results"));
+            return;
         }
 
         if (isset($_POST["roll"])) {
@@ -38,7 +39,7 @@ class PostYatzyPlay
         }
 
         $_SESSION["yatzy"]->rollDices();
-
-        return redirectTo(url("/yatzy/play"));
+        redirectTo(url("/yatzy/play"));
+        return;
     }
 }

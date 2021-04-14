@@ -23,7 +23,7 @@ use function Mos\Functions\{
  */
 class PostYatzyResults
 {
-    public function __invoke()
+    public function __invoke(): void
     {
         if (isset($_POST["valueToCount"])) {
             $_SESSION["valueToCount"] = $_POST["valueToCount"];
@@ -31,6 +31,7 @@ class PostYatzyResults
             $_SESSION["points"] = $_SESSION["yatzy"]->points;
         }
 
-        return redirectTo(url("/yatzy/results"));
+        redirectTo(url("/yatzy/results"));
+        return;
     }
 }

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Rist\Functions;
+namespace Mos\Functions;
 
 /**
  * Functions.

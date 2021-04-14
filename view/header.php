@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-use function Rist\Functions\url;
+use function Mos\Functions\url;
 
 ?><!doctype html>
 <html>
@@ -23,6 +23,7 @@ use function Rist\Functions\url;
     <nav>
         <a href="<?= url("/") ?>">Home</a> |
         <a href="<?= url("/game") ?>">Game 21</a> |
+        <a href="<?= url("/yatzy") ?>">Yatzy</a> |
         <a href="<?= url("/session") ?>">Session</a> |
         <a href="<?= url("/debug") ?>">Debug</a> |
         <a href="<?= url("/twig") ?>">Twig view</a> |

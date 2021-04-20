@@ -26,13 +26,13 @@ class ControllerGetYatzyResultsTest extends TestCase
     /**
      * Check that the controller returns a response.
      */
-    public function testControllerReturnsResponse()
-    {
-        $_SESSION["yatzy"] = new YatzyGame();
-        $controller = new GetYatzyResults();
-
-        $exp = "\Psr\Http\Message\ResponseInterface";
-        $res = $controller();
-        $this->assertInstanceOf($exp, $res);
-    }
+    // public function testControllerReturnsResponse()
+    // {
+    //     $_SESSION["yatzy"] = new YatzyGame();
+    //     $controller = new GetYatzyResults();
+    //
+    //     $exp = "\Psr\Http\Message\ResponseInterface";
+    //     $res = $controller();
+    //     $this->assertInstanceOf($exp, $res);
+    // }
 }

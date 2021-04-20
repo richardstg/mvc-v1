@@ -27,6 +27,7 @@ class YatzyGame
         $this->points = 0;
         $this->diceHand  = new DiceHand($numDices);
         $this->numberOfRolls = 0;
+        $this->numDices = $numDices;
     }
 
 
@@ -99,8 +100,6 @@ class YatzyGame
                 $multiplicator = $multiplicator + 1;
             }
         }
-
-        // if ($multiplicator * $diceValue > )
 
         $this->points = $multiplicator * $diceValue;
 

@@ -32,6 +32,7 @@
             <input type="submit" name="stop" value="Stanna">
         <?php endif; ?>
     <?php else : ?>
-        <input type="submit" name="stop" value="Till resultat">
+        <p>Markera tärningarna du vill använda och tryck sedan på knappen nedan.</p>
+        <input type="submit" name="stop" value="Gå vidare">
     <?php endif; ?>
 </form>

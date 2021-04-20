@@ -18,12 +18,22 @@ class GetPlay
     {
         $psr17Factory = new Psr17Factory();
 
-        $data = [
-            "playerLastHand" => $_SESSION["game"]->playerLastHand,
-            "playerLastHandSum" => $_SESSION["game"]->playerLastHandSum,
-            "playerLastHandGraphical" => $_SESSION["game"]->playerLastHandGraphical,
-            "totalPointsPlayer" => $_SESSION["game"]->protocol["player"],
-        ];
+        // $data = [
+        //     "playerLastHand" => null,
+        //     "playerLastHandSum" => null,
+        //     "playerLastHandGraphical" => null,
+        //     "totalPointsPlayer" => null,
+        // ];
+
+        // if (isset($_SESSION["game"])) {
+            $data = [
+                "playerLastHand" => $_SESSION["game"]->playerLastHand,
+                "playerLastHandSum" => $_SESSION["game"]->playerLastHandSum,
+                "playerLastHandGraphical" => $_SESSION["game"]->playerLastHandGraphical,
+                "totalPointsPlayer" => $_SESSION["game"]->protocol["player"],
+            ];
+        // }
+
         $body = renderView("layout/play.php", $data);
 
         return $psr17Factory

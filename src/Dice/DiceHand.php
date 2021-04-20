@@ -15,7 +15,7 @@ namespace Rist\Dice;
      private $values;
      private $graphicalValues;
      private $numDices;
-     private $dicesToKeepIndexes;
+     public  $dicesToKeepIndexes;
 
      /**
       * Constructor to create a DiceHand.
@@ -40,7 +40,7 @@ namespace Rist\Dice;
      /**
       * Roll the dices.
       *
-      * @return void.
+      * @return array.
       */
      public function roll()
      {
@@ -50,17 +50,19 @@ namespace Rist\Dice;
                  $this->graphicalValues[$i] = $this->dices[$i]->graphic();
              }
          }
+
+         return $this->values;
      }
 
-     /**
-      * Set the dices.
-      *
-      * @return void.
-      */
-     public function setDices($dices)
-     {
-         $this->dices = $dices;
-     }
+     // /**
+     //  * Set the dices.
+     //  *
+     //  * @return void.
+     //  */
+     // public function setDices($dices)
+     // {
+     //     $this->dices = $dices;
+     // }
 
      /**
       * Get which dices to keep.

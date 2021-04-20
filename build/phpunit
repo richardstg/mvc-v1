@@ -1,0 +1,24 @@
+PHPUnit 9.5.4 by Sebastian Bergmann and contributors.
+
+...............................E................................. 65 / 76 ( 85%)
+...........                                                       76 / 76 (100%)
+
+Time: 00:04.966, Memory: 26.00 MB
+
+There was 1 error:
+
+1) Rist\Controller\Yatzy\ControllerGetYatzyResultsTest::testControllerReturnsResponse
+Undefined offset: 1
+
+C:\Users\jag\dbwebb-kurser\mvc\me\game\view\yatzy\results.php:29
+C:\Users\jag\dbwebb-kurser\mvc\me\game\view\yatzy\resultspage.php:10
+C:\Users\jag\dbwebb-kurser\mvc\me\game\src\functions.php:45
+C:\Users\jag\dbwebb-kurser\mvc\me\game\src\Controller\Yatzy\GetYatzyResults.php:25
+C:\Users\jag\dbwebb-kurser\mvc\me\game\test\Controller\Yatzy\ControllerGetYatzyResultsTest.php:35
+
+ERRORS!
+Tests: 76, Assertions: 128, Errors: 1.
+
+Generating code coverage report in Clover XML format ... done [00:00.167]
+
+Generating code coverage report in HTML format ... done [00:00.794]

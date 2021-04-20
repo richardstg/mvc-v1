@@ -18,14 +18,25 @@ class GetResults
     {
         $psr17Factory = new Psr17Factory();
 
-        $data = [
-            "playerLastHandSum" => $_SESSION["game"]->playerLastHandSum,
-            "roundPointsPlayer" => $_SESSION["game"]->protocol["player"],
-            "roundPointsComputer" => $_SESSION["game"]->protocol["computer"],
-            "playerTotalScore" => $_SESSION["game"]->playerTotalScore,
-            "computerTotalScore" => $_SESSION["game"]->computerTotalScore,
-            "playerWin" => $_SESSION["game"]->playerWin,
-        ];
+        // $data = [
+        //     "playerLastHandSum" => null,
+        //     "roundPointsPlayer" => null,
+        //     "roundPointsComputer" => null,
+        //     "playerTotalScore" => null,
+        //     "computerTotalScore" => null,
+        //     "playerWin" => null,
+        // ];
+
+        // if (isset($_SESSION["game"])) {
+            $data = [
+                "playerLastHandSum" => $_SESSION["game"]->playerLastHandSum,
+                "roundPointsPlayer" => $_SESSION["game"]->protocol["player"],
+                "roundPointsComputer" => $_SESSION["game"]->protocol["computer"],
+                "playerTotalScore" => $_SESSION["game"]->playerTotalScore,
+                "computerTotalScore" => $_SESSION["game"]->computerTotalScore,
+                "playerWin" => $_SESSION["game"]->playerWin,
+            ];
+        // }
         $body = renderView("layout/results.php", $data);
 
         return $psr17Factory

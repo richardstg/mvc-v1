@@ -30,6 +30,7 @@
             </div>
         <?php endforeach; ?>
     </div>
+    <p>Tärningen du markerar är det värdet som kommer räknas på.</p>
     <input type="submit" name="countPoints" value="Räkna poäng">
 </form>
 <?php endif; ?>

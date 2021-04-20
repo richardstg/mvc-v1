@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Rist\Controller\Dice;
 
 use Nyholm\Psr7\Factory\Psr17Factory;
+use Nyholm\Psr7\Response;
 use Psr\Http\Message\ResponseInterface;
 
 use Rist\Dice\DiceGame;
@@ -23,14 +24,17 @@ use function Mos\Functions\{
  */
 class PostGame
 {
-    public function __invoke(): void
+    public function __invoke(): ResponseInterface
     {
         if (!isset($_SESSION["game"])) {
             $_SESSION["game"] = new DiceGame(intval($_POST["numberDices"]));
         } else {
             $_SESSION["game"]->newRound();
         }
-        redirectTo(url("/play"));
-        return;
+        return (new Response())
+            ->withStatus(301)
+            ->withHeader("Location", url("/play"));
+        // redirectTo(url("/play"));
+        // return;
     }
 }

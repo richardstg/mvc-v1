@@ -47,4 +47,14 @@ class Dice
     {
         return $this->lastRoll;
     }
+
+    /**
+     * Get sides.
+     *
+     * @return number last roll.
+     */
+    public function getSides()
+    {
+        return $this->sides;
+    }
 }
